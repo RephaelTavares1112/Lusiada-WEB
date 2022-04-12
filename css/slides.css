@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+/*Configuração Primaria*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{ /* para criar variaveis*/
+  --body-color: #efefef;
+  --nav-color: #4AC1E8;
+  --bg-color: #fff;
+  --message-color: #4EF2EF;
+  --noticia-color: #4EF292;
+  --fala-color: #4AE85F;
+  --leter-color: #000;
+
+
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-titulo1: 'Rock 3D', cursive;
+  --fonte-android: 'Android', cursive;
+
+}
+
+.dark-theme{
+  --body-color: #0a0a0a;
+  --nav-color: #000;
+  --bg-color: #000;
+  --message-color: #151616;
+  --noticia-color: #1f201f;
+  --fala-color: #161616;
+  --leter-color: #efefef;
+}
+
+.continer-slide{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide{
+  width: 100%;
+  height: 550px;
+  top: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.slides{
+  width: 100%;
+  display: flex;
+}
+
+.image img{
+  width: 1024px;
+  height: 576px;
+}
+
+div#sts{
+  width: 1400px;
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+div#sts img{
+  width: 200px;
+  height: 200px;
+}
+
+div#sts img{
+  width: 1024px;
+  height: 576px;
+}
+
+div#sts-lu{
+  width: 1400px;
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+div#sts-lu img{
+  width: 300px;
+  height: 300px;
+  padding: 5px 0;
+}
+
+div#sts-lu h1{
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div#sts-lu p{
+ font-size: 1.5em;
+}
+
+#atual{
+  margin-left: 0;
+  transition: all 1s;
+}
+
+.btn{
+  position: absolute;
+  color: rgb(219, 12, 12);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+  font-size: 1.7em;
+  margin-top: -5px;
+}
+
+.btn:hover{
+  transform: scale(1.5);
+}
+
+#voltar{
+  top: 50%;
+  left: 2%;
+}
+
+#next{
+  top: 50%;
+  right: 2%;
+}
+
+.bolas{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.bolas div{
+  width: 24px;
+  height: 5px;
+  transition: all 1s;
+  border: 2px solid rgb(77, 74, 74, 0.4);
+  padding: 1px;
+  margin-right: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.bolas div:hover{
+  background-color: rgb(70, 190, 40);
+}
+
+.imgAtual{
+  background-color: var(--body-color);
+  transition: all 1s;
+}
