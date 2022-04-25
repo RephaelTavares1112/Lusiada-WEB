@@ -111,7 +111,6 @@
 /* Nav Right*/
 .search-box{
   display: flex;
-  width: 125px;
   background: #efefefef;
   border-radius: 20px;
   align-items: center;
@@ -119,16 +118,31 @@
   transition: 0.5s;
 }
 
-.search-box.tamanho{
-  width: 250px;
-}
-
 .search-box input{
-  width: 100%;
+  width: 0;
   background: transparent;
   padding: 10px;
   outline: none;
   border: none;
+  transition: 0.5s;
+}
+
+.search-box.tamanho > input{
+  width: 250px;
+}
+
+.search-box:hover > input{
+  width: 250px;
+}
+
+.search-box .lupa{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 970px) {
