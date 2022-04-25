@@ -6,30 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/nav-bar-menu.css">
+  <title>Curiosidades</title>
 </head>
 <body>
-  <header>
-    <h1>Um mundo de conhecimento para Todos</h1>
-    <p>Garanta o seu Futuro Com a Universidade Lusiadas</p>
-  </header>
-  <nav>
+<!--Bara de navegação e menu-->
+<nav class="navigation">
+  <a href="index.html" class="nav-img">
+    <img src="img/ico-lusiadas.png" >
+  </a>
+
+  <!--Bitão de menu lateral-->
+  <div class="menuToggle"></div>
+
+  <!--Configuração do menu-->
+  <div class="menu-lateral">
     <div class="nav-left">
-      <img src="img/inicio.jpg" alt="Aqui vai uma imagem" class="logo">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="notici.html">Notícias</a></li>
-        <li><a href="curi.html">Curiosidades</a></li>
-        <li><a href="contac.html">Fale Conosco</a></li>
+        <li class="list active" style="--clr: #f44336;">
+          <a href="index.html">
+            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #ffa117;">
+          <a href="notici.html">
+            <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+            <span class="text">Notícias</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #0fc70f;">
+          <a href="curi.html">
+            <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+            <span class="text">Curiosidades</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #2196f3;">
+          <a href="contac.html">
+            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon> </span>
+            <span class="text">Fale Conosco</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="nav-right">
       <div class="search-box">
         <ion-icon name="search-outline"></ion-icon>
-        <input type="text" placeholder="Search">
+        <input class="box" type="text" placeholder="Pesquisar">
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<script src="js/menu.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -1,0 +1,299 @@
+:root{ /* para criar variaveis*/
+  --body-color: #efefef;
+  --nav-color: #4AC1E8;
+  --bg-color: #fff;
+  --message-color: #4EF2EF;
+  --noticia-color: #4EF292;
+  --fala-color: #4AE85F;
+  --leter-color: #000;
+
+
+  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-titulo1: 'Rock 3D', cursive;
+  --fonte-android: 'Android', cursive;
+
+}
+
+.dark-theme{
+  --body-color: #0a0a0a;
+  --nav-color: #000;
+  --bg-color: #000;
+  --message-color: #151616;
+  --noticia-color: #1f201f;
+  --fala-color: #161616;
+  --leter-color: #efefef;
+}
+
+/*Menu*/
+.navigation{
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 5px 5px 5px;
+}
+
+.navigation.stick{
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  transition: 0.3s;
+  background-color: var(--nav-color);
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.342);
+  z-index: 1000;
+}
+
+/* Configuração da logo*/
+.navigation .nav-img{
+  width: 19rem;
+  transition: 0.5s;
+}
+
+.navigation .nav-img img{
+  width: 100%;
+}
+
+.navigation .nav-img img:hover{
+  border: 1px solid black;
+  transform: scale(0.7);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.39);
+}
+
+.navigation.stick .nav-img img:hover{
+  border: 1px solid rgb(255, 255, 255);
+  transform: scale(0.7);
+}
+
+/*Configuração do menu*/
+
+.navigation .menu-lateral{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation .menu-lateral .nav-left ul li:hover{
+  color: rgb(99, 99, 99);
+}
+
+.navigation.stick .nav-left ul li:hover{
+  color: #fff;
+}
+
+
+.nav-left, .nav-right{
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+
+.nav-left ul li{
+  list-style: none;
+  display: inline;
+  padding: 0 5px;
+}
+
+.nav-left ul li a{
+  color: var(--cor4);
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navigation .nav-left ul li:hover{
+  color: rgb(78, 78, 78);
+}
+
+/* Nav Right*/
+.search-box{
+  display: flex;
+  width: 125px;
+  background: #efefefef;
+  border-radius: 20px;
+  align-items: center;
+  padding: 0 15px;
+  transition: 0.5s;
+}
+
+.search-box.tamanho{
+  width: 250px;
+}
+
+.search-box input{
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 970px) {
+
+  .navigation .menu-lateral .search-box{
+    visibility: hidden;
+    transition: 0.2s;
+  }
+
+  .navigation.open .menu-lateral .search-box{
+    visibility: visible;
+    transition: 0.2s;
+  }
+
+  .navigation .menu-lateral{
+    position: fixed;
+    width: 0;
+    top: 70px;
+    right: 0;
+    background: rgba(243, 243, 243, 0.705);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    justify-items: flex-end;
+    align-items: center;
+    margin: 0 1rem;
+    height: calc(100vh - 80px);
+  }
+  
+  .navigation.open .menu-lateral{
+    width: 250px;
+  }
+  
+  .navigation .menuToggle{
+    position: absolute;
+    top: 0;
+    width: 3rem;
+    right: 1rem;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 0 2px;
+  }
+  
+  .navigation .menuToggle::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+  }
+  
+  .navigation.open .menuToggle::before{
+    transform: translateY(0px) rotate(225deg);
+  }
+  
+  .navigation .menuToggle::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #333;
+  }
+  
+  .navigation.open .menuToggle::after{
+    transform: translateY(0px) rotate(-225deg);
+    box-shadow: 0 0px 0 #333;
+  }
+
+  .navigation .menu-lateral .nav-left{
+    width: 100%;
+    margin: 2rem 0;
+  }
+  
+  .navigation .menu-lateral .nav-left ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li{
+    list-style-type: none;
+    position: relative;
+    transition: 0.5s;
+    margin: 0 -1rem;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li.active{
+    transform: translateX(-30px);
+  }
+  
+  .navigation.open .menu-lateral .nav-left ul li.active{
+    transform: translateX(-10px);
+  }
+  
+  .navigation .menu-lateral .nav-left ul li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    line-height: 60px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-size: 1.75em;
+    color: #222;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li.active a .icon{
+    color: #fff;
+    background: var(--clr);
+  }
+  
+  .navigation .menu-lateral .nav-left ul li a .icon::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    filter: blur(8px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li.active a .icon::before{
+    opacity: 0.5;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li a .text{
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  
+  .navigation.open .menu-lateral .nav-left ul li a .text{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navigation .menu-lateral .nav-left ul li.active a .text{
+    color: var(--clr);
+  }
+}

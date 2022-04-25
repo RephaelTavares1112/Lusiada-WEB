@@ -1,8 +1,4 @@
-/*Para fixar o menu*/
-window.addEventListener("scroll", function(){
-  var header = document.querySelector("nav");
-  header.classList.toggle("stick", window.scrollY>0);
-})
+
 
 /*Para o botão toggle*/
 const body = document.querySelector('body');
