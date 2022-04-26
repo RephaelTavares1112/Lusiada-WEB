@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
-  <!--Links css-->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/nav-bar-menu.css">
-  <link rel="stylesheet" href="css/contac.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <!--Links css-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/nav-bar-menu.css">
+    <link rel="stylesheet" href="css/contac.css">
 
-  <title>Fale Conosco</title>
-</head>
-<body>
-  <!--Bara de navegação e menu-->
-  <nav class="navigation">
-    <a href="index.html" class="nav-img">
-      <img src="img/ico-lusiadas.png" >
-    </a>
+    <title>Fale Conosco</title>
+  </head>
+  <body>
+    <!--Bara de navegação e menu-->
+    <nav class="navigation">
+      <a href="index.html" class="nav-img">
+        <img src="img/ico-lusiadas.png" >
+      </a>
 
-    <!--Bitão de menu lateral-->
-    <div class="menuToggle"></div>
+      <!--Bitão de menu lateral-->
+      <div class="menuToggle"></div>
 
-    <!--Configuração do menu-->
-    <div class="menu-lateral">
-      <div class="nav-left">
-        <ul>
-          <li class="list" style="--clr: #f44336;">
-            <a href="index.html">
-              <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-              <span class="text">Home</span>
-            </a>
-          </li>
-          <li class="list" style="--clr: #ffa117;">
-            <a href="notici.html">
-              <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
-              <span class="text">Notícias</span>
-            </a>
-          </li>
-          <li class="list" style="--clr: #0fc70f;">
-            <a href="curi.html">
-              <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
-              <span class="text">Curiosidades</span>
-            </a>
-          </li>
-          <li class="list active" style="--clr: #2196f3;">
-            <a href="contac.html">
-              <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon> </span>
-              <span class="text">Fale Conosco</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="nav-right">
-        <div class="search-box">
-          <input type="text" class="box" placeholder="Pesquisar">
-          <ion-icon class="lupa" name="search-outline"></ion-icon>
+      <!--Configuração do menu-->
+      <div class="menu-lateral">
+        <div class="nav-left">
+          <ul>
+            <li class="list" style="--clr: #f44336;">
+              <a href="index.html">
+                <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                <span class="text">Home</span>
+              </a>
+            </li>
+            <li class="list" style="--clr: #ffa117;">
+              <a href="notici.html">
+                <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                <span class="text">Notícias</span>
+              </a>
+            </li>
+            <li class="list" style="--clr: #0fc70f;">
+              <a href="curi.html">
+                <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+                <span class="text">Curiosidades</span>
+              </a>
+            </li>
+            <li class="list active" style="--clr: #2196f3;">
+              <a href="contac.html">
+                <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon> </span>
+                <span class="text">Fale Conosco</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <div class="search-box">
+            <input type="text" class="box" placeholder="Pesquisar">
+            <ion-icon class="lupa" name="search-outline"></ion-icon>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-<main>
-  
+    </nav>
+    <main>
       <!--Formulario para contacto atraves do email-->
         <form class="formulario" onsubmit="sendEmail(); reset(); returnfalse">
           <h3>Envie a sua mensagem!</h3>
@@ -71,30 +70,29 @@
           <textarea id="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
           <button type="submit">Enviar</button>
         </form>
-</main>
-  <script src="js/menu-lateral.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail() {
-      Email.send({
-        /*secureToken: "39597797-603f-46ed-ac40-5d0d7d0d6e67",*/
-        Host: "smtp.gmail.com",
-        Username: "walllenestor@gmail.com",
-        Password: "Deus3570",
-        To: 'walllenestor@gmal.com',
-        From: document.getElementById("email").value,
-        Subject: "New Contact Form Enquiry",
-        Body: "Name: " + document.getElementById("name").value
-              + "<br> Email: " + document.getElementById("email").value
-              + "<br> Phone no: " + document.getElementById("phone").value
-              + "<br> Message: " + document.getElementById("phone").value,
-       }).then(
-         message => alert("Menssagem Enviada com sucesso")
-       );
-    }
-  </script>
+    </main>
     <script src="js/menu.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          /*secureToken: "39597797-603f-46ed-ac40-5d0d7d0d6e67",*/
+          Host: "https//:www.gmail.com",
+          Username: "walllenestor@gmail.com",
+          Password: "Deus3570",
+          To: 'walllenestor@gmal.com',
+          From: document.getElementById("email").value,
+          Subject: "New Contact Form Enquiry",
+          Body: "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone no: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("phone").value,
+        }).then(
+          message => alert("Menssagem Enviada com sucesso")
+        );
+      }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>

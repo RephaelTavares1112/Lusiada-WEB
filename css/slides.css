@@ -69,10 +69,6 @@ div#sts{
   align-items: center;
   justify-content: center;
 }
-div#sts img{
-  width: 200px;
-  height: 200px;
-}
 
 div#sts img{
   width: 1024px;
@@ -166,4 +162,270 @@ div#sts-lu p{
 .imgAtual{
   background-color: var(--body-color);
   transition: all 1s;
+}
+
+@media screen and (max-width: 1024px) {
+  .continer-slide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide{
+    width: 100%;
+    height: 500px;
+    top: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  
+  .slides{
+    width: 100%;
+    display: flex;
+  }
+  
+  .image img{
+    width: 1020px;
+    height: 490px;
+  }
+  
+  div#sts{
+    width: 1020px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  div#sts img{
+    width: 1020px;
+    height: 550px;
+  }
+  
+  div#sts-lu{
+    width: 1020px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+  div#sts-lu img{
+    width: 300px;
+    height: 300px;
+    padding: 5px 0;
+  }
+  
+  div#sts-lu h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  div#sts-lu p{
+   font-size: 1.5em;
+  }
+  
+  #atual{
+    margin-left: 0;
+    transition: all 1s;
+  }
+  
+  .btn{
+    position: absolute;
+    color: rgb(219, 12, 12);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    font-size: 1.7em;
+    margin-top: -5px;
+  }
+  
+  .btn:hover{
+    transform: scale(1.5);
+  }
+  
+  #voltar{
+    top: 50%;
+    left: 2%;
+  }
+  
+  #next{
+    top: 50%;
+    right: 2%;
+  }
+  
+  .bolas{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+  }
+  
+  .bolas div{
+    width: 24px;
+    height: 5px;
+    transition: all 1s;
+    border: 2px solid rgb(77, 74, 74, 0.4);
+    padding: 1px;
+    margin-right: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .bolas div:hover{
+    background-color: rgb(70, 190, 40);
+  }
+  
+  .imgAtual{
+    background-color: var(--body-color);
+    transition: all 1s;
+  }
+  
+}
+
+@media screen and (max-width: 770px) {
+  .continer-slide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide{
+    width: 100%;
+    height: 500px;
+    top: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  
+  .slides{
+    width: 100%;
+    display: flex;
+  }
+  
+  .image img{
+    width: 765px;
+    height: 490px;
+  }
+  
+  div#sts{
+    width: 765px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  div#sts img{
+    width: 765px;
+    height: 500px;
+  }
+  
+  div#sts-lu{
+    width: 765px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+  div#sts-lu img{
+    width: 300px;
+    height: 300px;
+    padding: 5px 0;
+  }
+  
+  div#sts-lu h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  div#sts-lu p{
+   font-size: 1.5em;
+  }
+  
+  #atual{
+    margin-left: 0;
+    transition: all 1s;
+  }
+  
+  .btn{
+    position: absolute;
+    color: rgb(219, 12, 12);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    font-size: 1.7em;
+    margin-top: -5px;
+  }
+  
+  .btn:hover{
+    transform: scale(1.5);
+  }
+  
+  #voltar{
+    top: 50%;
+    left: 2%;
+  }
+  
+  #next{
+    top: 50%;
+    right: 2%;
+  }
+  
+  .bolas{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+  }
+  
+  .bolas div{
+    width: 24px;
+    height: 5px;
+    transition: all 1s;
+    border: 2px solid rgb(77, 74, 74, 0.4);
+    padding: 1px;
+    margin-right: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .bolas div:hover{
+    background-color: rgb(70, 190, 40);
+  }
+  
+  .imgAtual{
+    background-color: var(--body-color);
+    transition: all 1s;
+  }
+  
 }

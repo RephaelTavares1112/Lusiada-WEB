@@ -43,8 +43,18 @@ function slides(){
     atual = quant.length-1
   }
   document.querySelector('.imgAtual').classList.remove('imgAtual')
-  image.style.marginLeft = -1400*atual+'px'
+  image.style.marginLeft = -1024*atual+'px'
   document.getElementById(atual).classList.add('imgAtual')
+  if(window.screen = 1024+'px'){
+    document.querySelector('.imgAtual').classList.remove('imgAtual')
+    image.style.marginLeft = -1020*atual+'px'
+    document.getElementById(atual).classList.add('imgAtual')
+  }if(window.screen = 770+'px'){
+    document.querySelector('.imgAtual').classList.remove('imgAtual')
+    image.style.marginLeft = -765*atual+'px'
+    document.getElementById(atual).classList.add('imgAtual')
+  }
+
 }
 setInterval(()=>{
   if(rolar){
