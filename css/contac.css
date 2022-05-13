@@ -36,10 +36,11 @@ main{
   justify-content: center;
   width: 100%;
   height: calc(100vh - 80px);
+  background: rgb(223, 223, 223);
 }
 
 main .formulario{
-  width: 60%;
+  width: 80%;
   background-color: #fff;
   display: flex;
   flex-direction: column;

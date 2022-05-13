@@ -1,5 +1,5 @@
 var bolas = document.querySelector('.bolas')
-var quant = document.querySelectorAll('.slides .image')
+var quant = document.querySelectorAll('.slides .noticia')
 var atual = 0
 var image = document.getElementById('atual')
 var next = document.getElementById('next')
@@ -43,7 +43,7 @@ function slides(){
     atual = quant.length-1
   }
   document.querySelector('.imgAtual').classList.remove('imgAtual')
-  image.style.marginLeft = -1400*atual+'px'
+  image.style.marginLeft = -230*atual+'px'
   document.getElementById(atual).classList.add('imgAtual')
   if(window.screen <= 1024+'px'){
     document.querySelector('.imgAtual').classList.remove('imgAtual')
@@ -64,4 +64,4 @@ setInterval(()=>{
   else{
     rolar = true
   }
-},10000)
+},4000)
