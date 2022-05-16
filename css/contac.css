@@ -20,16 +20,6 @@
 
 }
 
-.dark-theme{
-  --body-color: #0a0a0a;
-  --nav-color: #000;
-  --bg-color: #000;
-  --message-color: #151616;
-  --noticia-color: #1f201f;
-  --fala-color: #161616;
-  --leter-color: #efefef;
-}
-
 main{
   display: flex;
   align-items: center;
@@ -49,13 +39,13 @@ main .formulario{
   border-radius: 10px;
 }
 
-form h3{
+main .formulario h3{
   color: #555;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-form input, form textarea{
+main .formulario input, main .formulario textarea{
   border: 0;
   width: 60%;
   margin: 0.4rem 0;
@@ -65,7 +55,7 @@ form input, form textarea{
   font-size: 16px;
 }
 
-form button{
+main .formulario button{
   padding: 15px;
   background: #ff5361;
   color: #fff;

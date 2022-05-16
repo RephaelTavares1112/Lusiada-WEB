@@ -1,66 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/nav-bar-menu.css">
-  <link rel="stylesheet" href="css/curi.css">
-  <title>Curiosidades</title>
-</head>
-<body>
-<!--Bara de navegação e menu-->
-<nav class="navigation">
-  <a href="index.html" class="nav-img">
-    <img src="img/ico-lusiadas.png" >
-  </a>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--Bitão de menu lateral-->
-  <div class="menuToggle"></div>
+    <!--Importação dos script-->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 
-  <!--Configuração do menu-->
-  <div class="menu-lateral">
-    <div class="nav-left">
-      <ul>
-        <li class="list" style="--clr: #f44336;">
-          <a href="index.html">
-            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-            <span class="text">Home</span>
-          </a>
-        </li>
-        <li class="list" style="--clr: #ffa117;">
-          <a href="notici.html">
-            <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
-            <span class="text">Notícias</span>
-          </a>
-        </li>
-        <li class="list active" style="--clr: #0fc70f;">
-          <a href="curi.html">
-            <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
-            <span class="text">Curiosidades</span>
-          </a>
-        </li>
-        <li class="list" style="--clr: #2196f3;">
-          <a href="contac.html">
-            <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon> </span>
-            <span class="text">Fale Conosco</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <div class="search-box">
-        <input type="text" class="box" placeholder="Pesquisar">
-        <ion-icon class="lupa" name="search-outline"></ion-icon>
+    <!--Icone da barra de navegação-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--Importação do css-->
+    <link rel="stylesheet" href="css/curi.css">
+    <link rel="stylesheet" href="css/nav-bar-menu.css">
+
+    <title>Curiosidades</title>
+
+  </head>
+  <body>
+    <!--Bara de navegação e menu-->
+    <nav class="navigation">
+
+      <!--logo-->
+      <a href="index.html" class="nav-img">
+        <img src="img/ico-lusiadas.png" >
+      </a>
+
+      <!--Bitão de menu lateral-->
+      <div class="menuToggle"></div>
+
+      <!--Configuração do menu-->
+      <div class="menu-lateral">
+
+        <div class="nav-left">
+
+          <ul>
+
+            <li class="list" style="--clr: #f44336;">
+              <a href="index.html">
+                <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                <span class="text">Home</span>
+              </a>
+            </li>
+
+            <li class="list" style="--clr: #ffa117;">
+              <a href="notici.html">
+                <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                <span class="text">Notícias</span>
+              </a>
+            </li>
+
+            <li class="list active" style="--clr: #0fc70f;">
+              <a href="curi.html">
+                <span class="icon"><ion-icon name="add-circle-outline"></ion-icon></span>
+                <span class="text">Curiosidades</span>
+              </a>
+            </li>
+
+            <li class="list" style="--clr: #2196f3;">
+              <a href="contac.html">
+                <span class="icon"><ion-icon name="chatbubble-outline"></ion-icon> </span>
+                <span class="text">Fale Conosco</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!--Pesquisa-->
+        <div class="nav-right">
+          <div class="search-box">
+            <input type="text" class="box" placeholder="Pesquisar">
+            <ion-icon class="lupa" name="search-outline"></ion-icon>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
-</nav>
 
-<script src="js/menu.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    </nav>
+
+    <main>
+      <!--conteudo-->
+      <section class="saude"></section>
+
+      <section class="tecnologia"></section>
+
+      <section class="desporto"></section>
+      
+    </main>
+
+    <!--Importação dos script-->
+    <script src="js/menu.js"></script>
+
+    <!--Impotação dos icones-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
